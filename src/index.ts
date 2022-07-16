@@ -1,12 +1,5 @@
-import { Strategy } from "./strategy";
+import { Strategy } from './strategy';
 
-import type {
-    StrategyOptions,
-    VerifyFunction,
-} from "./types";
+import type { StrategyOptions, VerifyFunction } from './types';
 
-export {
-  Strategy,
-  StrategyOptions,
-  VerifyFunction,
-};
+export { Strategy, StrategyOptions, VerifyFunction };
