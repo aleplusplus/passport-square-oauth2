@@ -1,8 +1,25 @@
-import { StrategyOptions, VerifyFunction } from 'passport-oauth2';
+import { OutgoingHttpHeaders } from 'http';
+import { StateStore, VerifyFunction } from 'passport-oauth2';
 
-interface SquareStrategyOptions extends StrategyOptions {
+interface SquareStrategyOptions {
+  authorizationURL?: string;
+  tokenURL?: string;
+  clientID: string;
+  clientSecret: string;
+  callbackURL?: string | undefined;
+  customHeaders?: OutgoingHttpHeaders | undefined;
+  scope?: string | string[] | undefined;
+  scopeSeparator?: string | undefined;
+  sessionKey?: string | undefined;
+  store?: StateStore | undefined;
+  state?: any;
+  skipUserProfile?: any;
+  pkce?: boolean | undefined;
+  proxy?: any;
+  passReqToCallback?: false | undefined;
   grant_type?: string;
   userProfileURL?: string;
+  
 }
 
-export { SquareStrategyOptions, VerifyFunction };
+export type { SquareStrategyOptions, VerifyFunction };

@@ -1,4 +1,4 @@
-import { Strategy as OAuth2Strategy, InternalOAuthError } from 'passport-oauth2';
+import OAuth2Strategy, { InternalOAuthError, StrategyOptions } from 'passport-oauth2';
 import { SquareStrategyOptions, VerifyFunction } from './types';
 
 /**
@@ -47,7 +47,7 @@ export class SquareStrategy extends OAuth2Strategy {
       'MERCHANT_PROFILE_READ,PAYMENTS_READ,PAYMENTS_WRITE,SETTLEMENTS_READ,ITEMS_READ,ITEMS_WRITE,ORDERS_READ,ORDERS_WRITE';
     options.scopeSeparator = options.scopeSeparator || ',';
     options.grant_type = options.grant_type || 'authorization_code';
-    super(options, verify);
+    super(options as StrategyOptions, verify);
     this.name = 'square';
     this._userProfileURL = options.userProfileURL || 'https://connect.squareup.com/v2/merchants/me';
   }
@@ -79,6 +79,7 @@ export class SquareStrategy extends OAuth2Strategy {
     const headers = {
       Authorization: authorization,
     };
+    
     // @ts-ignore
     this._oauth2._request('GET', this._userProfileURL, headers, '', '', (err, body) => {
       if (err) {
