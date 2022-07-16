@@ -1,4 +1,4 @@
-import OAuth2Strategy, { InternalOAuthError, StrategyOptions, VerifyFunction } from 'passport-oauth2';
+import * as OAuth2Strategy from 'passport-oauth2';
 
 /**
  * `Strategy` constructor.
@@ -33,7 +33,7 @@ import OAuth2Strategy, { InternalOAuthError, StrategyOptions, VerifyFunction } f
  *     ));
  */
 
-export interface SquareStrategyOptions extends StrategyOptions {
+export interface SquareStrategyOptions extends OAuth2Strategy.StrategyOptions {
   grant_type?: string;
   userProfileURL?: string;
 }
@@ -41,7 +41,7 @@ export interface SquareStrategyOptions extends StrategyOptions {
 export class SquareStrategy extends OAuth2Strategy {
   _userProfileURL: string;
 
-  constructor(options: SquareStrategyOptions, verify: VerifyFunction) {
+  constructor(options: SquareStrategyOptions, verify: OAuth2Strategy.VerifyFunction) {
     options = options || {};
     // http://developers.Square.com/oauth/
     options.authorizationURL = options.authorizationURL || 'https://connect.squareup.com/oauth2/authorize';
@@ -81,7 +81,7 @@ export class SquareStrategy extends OAuth2Strategy {
   userProfile(accessToken: string, done: (err: any, user?: any) => void): void {
     this._oauth2.get(this._userProfileURL, accessToken, (err, body) => {
       if (err) {
-        return done(new InternalOAuthError('failed to fetch user profile', err));
+        return done(new OAuth2Strategy.InternalOAuthError('failed to fetch user profile', err));
       }
 
       try {

@@ -13,8 +13,11 @@ describe('SquareStrategy', function () {
         function () {},
       );
 
-      it('should be named oauth2', function () {
+      it('should be named square', function () {
         expect(strategy.name).toEqual('square');
+      });
+      it('should be have authenticate method', function () {
+        expect(typeof strategy.authenticate).toBe('function');
       });
     }); // with normal options
   }); // constructed

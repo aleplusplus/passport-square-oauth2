@@ -1,7 +1,5 @@
 {
   "compilerOptions": {
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
     "target": "es2018",
     "lib": ["es2018"],
     "module": "commonjs",
