@@ -1,4 +1,4 @@
-import { SquareStrategy } from '../index';
+import { Strategy as  SquareStrategy} from '../index';
 
 describe('SquareStrategy', function () {
   describe('constructed', function () {
