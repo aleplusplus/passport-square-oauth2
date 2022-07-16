@@ -1,7 +1,7 @@
 import { OutgoingHttpHeaders } from 'http';
 import { StateStore, VerifyFunction } from 'passport-oauth2';
 
-interface SquareStrategyOptions {
+interface StrategyOptions {
   authorizationURL?: string;
   tokenURL?: string;
   clientID: string;
@@ -21,4 +21,4 @@ interface SquareStrategyOptions {
   userProfileURL?: string;
 }
 
-export type { SquareStrategyOptions, VerifyFunction };
+export type { StrategyOptions, VerifyFunction };

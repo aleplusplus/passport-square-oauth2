@@ -1,5 +1,5 @@
 import OAuth2Strategy, { InternalOAuthError, StrategyOptions } from 'passport-oauth2';
-import { SquareStrategyOptions, VerifyFunction } from './types';
+import { StrategyOptions as SquareStrategyOptions, VerifyFunction } from './types';
 
 /**
  * `Strategy` constructor.
@@ -34,7 +34,7 @@ import { SquareStrategyOptions, VerifyFunction } from './types';
  *     ));
  */
 
-export class SquareStrategy extends OAuth2Strategy {
+export class Strategy extends OAuth2Strategy {
   _userProfileURL: string;
 
   constructor(options: SquareStrategyOptions, verify: VerifyFunction) {

@@ -1,3 +1,12 @@
-import { SquareStrategy } from './strategy';
+import { Strategy } from "./strategy";
 
-export { SquareStrategy as Strategy };
+import type {
+    StrategyOptions,
+    VerifyFunction,
+} from "./types";
+
+export {
+  Strategy,
+  StrategyOptions,
+  VerifyFunction,
+};
