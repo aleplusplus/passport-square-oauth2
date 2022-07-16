@@ -1,0 +1,49 @@
+{
+  "name": "passport-square-oauth2",
+  "version": "1.0.0",
+  "description": "Passport provider for Square OAuth 2",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aleplusplus/passport-square-oauth2.git"
+  },
+  "keywords": [
+    "Passport",
+    "Square",
+    "OAuth2"
+  ],
+  "author": "Alejandro Labrada <alabradadiaz@gmail.com> (https://github.com/aleplusplus)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aleplusplus/passport-square-oauth2/issues"
+  },
+  "homepage": "https://github.com/aleplusplus/passport-square-oauth2#readme",
+  "devDependencies": {
+    "@types/jest": "^28.1.6",
+    "@types/passport-oauth2": "^1.4.11",
+    "jest": "^28.1.3",
+    "prettier": "^2.7.1",
+    "ts-jest": "^28.0.6",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.7.4"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "dependencies": {
+    "passport-oauth2": "^1.6.1"
+  }
+}
