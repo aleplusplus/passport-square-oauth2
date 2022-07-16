@@ -1,6 +1,6 @@
 {
   "name": "passport-square-oauth2",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Passport provider for Square OAuth 2",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
