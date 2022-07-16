@@ -1,4 +1,4 @@
-import {Strategy as OAuth2Strategy,  InternalOAuthError } from 'passport-oauth2';
+import { Strategy as OAuth2Strategy, InternalOAuthError } from 'passport-oauth2';
 import { SquareStrategyOptions, VerifyFunction } from './types';
 
 /**
