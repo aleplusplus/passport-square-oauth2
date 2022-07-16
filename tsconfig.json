@@ -1,9 +1,8 @@
 {
   "compilerOptions": {
+    "target": "esnext",
+    "module": "commonjs",
     "esModuleInterop": true,
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "module": "esnext",
     "declaration": true,
     "outDir": "./lib",
     "strict": true,

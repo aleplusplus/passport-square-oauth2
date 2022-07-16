@@ -4,6 +4,7 @@
   "description": "Passport provider for Square OAuth 2",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "type": "module",
   "scripts": {
     "test": "jest --config jestconfig.json",
     "build": "tsc",
