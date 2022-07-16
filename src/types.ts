@@ -19,7 +19,6 @@ interface SquareStrategyOptions {
   passReqToCallback?: false | undefined;
   grant_type?: string;
   userProfileURL?: string;
-  
 }
 
 export type { SquareStrategyOptions, VerifyFunction };

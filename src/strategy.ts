@@ -79,7 +79,7 @@ export class SquareStrategy extends OAuth2Strategy {
     const headers = {
       Authorization: authorization,
     };
-    
+
     // @ts-ignore
     this._oauth2._request('GET', this._userProfileURL, headers, '', '', (err, body) => {
       if (err) {
