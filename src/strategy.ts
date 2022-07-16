@@ -79,15 +79,15 @@ export class SquareStrategy extends OAuth2Strategy {
    */
 
   userProfile(accessToken: string, done: (err: any, user?: any) => void): void {
-    this._oauth2.get(this._userProfileURL, accessToken, function (err, body, res) {
+    this._oauth2.get(this._userProfileURL, accessToken, (err, body) => {
       if (err) {
         return done(new InternalOAuthError('failed to fetch user profile', err));
       }
 
       try {
-        var merchant = JSON.parse(body as string).merchant;
+        const merchant = JSON.parse(body as string).merchant;
 
-        var profile = {
+        const profile = {
           provider: 'square',
           id: merchant.id,
           businessName: merchant.business_name,
