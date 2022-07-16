@@ -1,5 +1,3 @@
 import { SquareStrategy } from './strategy';
 
-export {
-    SquareStrategy as Strategy 
-};
+export { SquareStrategy as Strategy };
