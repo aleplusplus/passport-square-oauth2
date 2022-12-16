@@ -16,7 +16,7 @@ interface StrategyOptions {
   skipUserProfile?: any;
   pkce?: boolean | undefined;
   proxy?: any;
-  passReqToCallback?: false | undefined;
+  passReqToCallback?: boolean | undefined;
   grant_type?: string;
   userProfileURL?: string;
 }
